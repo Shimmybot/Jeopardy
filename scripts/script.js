@@ -91,7 +91,7 @@ function getCategory() {
   let offset = Math.random() * 100;
   axios({
     method: "get",
-    url: "http://jservice.io/api/categories?count=20&offset=" + offset,
+    url: "https://jservice.io/api/categories?count=20&offset=" + offset,
   }).then((response) => {
     buildCategories(response);
   });
@@ -100,7 +100,7 @@ function getCategory() {
 function getClues(cat) {
   axios({
     method: "get",
-    url: "http://jservice.io/api/clues?category=" + cat.id,
+    url: "https://jservice.io/api/clues?category=" + cat.id,
   })
     .then((response) => {
       let cluesList = response.data;
